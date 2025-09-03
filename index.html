@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Personal Blog</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header container">
+    <div class="brand">
+      <a href="index.html" class="logo">W<span>aleed</span> Blog</a>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#posts">Categories</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="actions">
+      <button id="themeToggle" class="btn ghost">🌓</button>
+      <button id="menuToggle" class="btn ghost">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav id="mobileNav" class="mobile-nav" hidden>
+    <a href="#home">Home</a>
+    <a href="#posts">Categories</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero container">
+      <img src="https://picsum.photos/id/1015/1200/600" alt="Mountain landscape" />
+      <div class="hero-content">
+        <p class="eyebrow">Featured</p>
+        <h1>Finding Focus in a Noisy World</h1>
+        <p>Simple tactics to protect your attention and build deep work habits.</p>
+        <a href="post.html" class="btn primary">Read More</a>
+      </div>
+    </section>
+
+    <div class="container layout">
+      <!-- Posts Grid -->
+      <section class="content">
+        <div class="content-head">
+          <h2 id="posts">Latest Posts</h2>
+          <input id="searchInput" type="search" placeholder="Search posts…" />
+        </div>
+        <div id="postsGrid" class="posts-grid">
+          <article class="card" data-title="Deep Work Routines" data-category="Productivity">
+            <img src="https://picsum.photos/id/1005/600/400" alt="">
+            <h3>Deep Work Routines</h3>
+            <p>How to structure your day for flow and focus.</p>
+            <small>Productivity • Aug 20, 2025</small>
+            <a href="post.html" class="btn text">Read More →</a>
+          </article>
+          <article class="card" data-title="Designing with Constraints" data-category="Design">
+            <img src="https://picsum.photos/id/1011/600/400" alt="">
+            <h3>Designing with Constraints</h3>
+            <p>Why constraints fuel creativity.</p>
+            <small>Design • Jul 12, 2025</small>
+            <a href="post.html" class="btn text">Read More →</a>
+          </article>
+          <article class="card" data-title="JavaScript Tips" data-category="Development">
+            <img src="https://picsum.photos/id/180/600/400" alt="">
+            <h3>10 Practical JavaScript Tips</h3>
+            <p>Cleaner, safer code snippets.</p>
+            <small>Development • Jun 5, 2025</small>
+            <a href="post.html" class="btn text">Read More →</a>
+          </article>
+          <article class="card" data-title="Learning in Public" data-category="Career">
+            <img src="https://picsum.photos/id/1027/600/400" alt="">
+            <h3>Learning in Public</h3>
+            <p>Grow by sharing your journey.</p>
+            <small>Career • May 10, 2025</small>
+            <a href="post.html" class="btn text">Read More →</a>
+          </article>
+          <article class="card" data-title="CSS Grid Essentials" data-category="Development">
+            <img src="https://picsum.photos/id/1040/600/400" alt="">
+            <h3>Essential CSS Grid</h3>
+            <p>Layouts you’ll actually use.</p>
+            <small>Development • Apr 22, 2025</small>
+            <a href="post.html" class="btn text">Read More →</a>
+          </article>
+          <article class="card" data-title="Mindful Mornings" data-category="Lifestyle">
+            <img src="https://picsum.photos/id/1069/600/400" alt="">
+            <h3>Mindful Mornings</h3>
+            <p>Start your day with clarity.</p>
+            <small>Lifestyle • Mar 2, 2025</small>
+            <a href="post.html" class="btn text">Read More →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <section class="widget sticky">
+          <h3>Categories</h3>
+          <ul id="categoryList">
+            <li><button class="tag" data-filter="all">All</button></li>
+            <li><button class="tag" data-filter="Productivity">Productivity</button></li>
+            <li><button class="tag" data-filter="Design">Design</button></li>
+            <li><button class="tag" data-filter="Development">Development</button></li>
+            <li><button class="tag" data-filter="Career">Career</button></li>
+            <li><button class="tag" data-filter="Lifestyle">Lifestyle</button></li>
+          </ul>
+        </section>
+        <section class="widget">
+          <h3>Recent Posts</h3>
+          <ul>
+            <li><a href="post.html">How I Plan My Week</a></li>
+            <li><a href="post.html">Atomic Design in Practice</a></li>
+            <li><a href="post.html">From Tutorial Hell to Projects</a></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <section id="about" class="container info">
+      <h2>About</h2>
+      <p>I’m Waleed — a developer sharing posts on code, design, and career growth.</p>
+    </section>
+
+    <section id="contact" class="container info">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn primary">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Waleed Blog. All rights reserved.</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
